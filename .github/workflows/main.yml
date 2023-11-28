@@ -22,7 +22,7 @@ jobs:
       - name: Run Tests
         run: |
           dir
-          cd assem
+          cd assembackend
           python manage.py test
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
