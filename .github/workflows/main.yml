@@ -34,7 +34,7 @@ jobs:
           port: 22
           script: |
             cd assembackend
-            source /root/venv/bin/activate
+            source /venv/bin/activate
             git pull
             python manage.py migrate
             python manage.py collectstatic --noinput
