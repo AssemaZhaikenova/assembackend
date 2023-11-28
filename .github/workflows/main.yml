@@ -22,19 +22,19 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          dir
-          cd main_dr
+          ls -R
+          cd assembackend
           python manage.py test
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: 34.116.67.50
+          host: 24.199.113.17
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd a
-            source /home/kimd_22848/venv/bin/activate
+            cd assembackend
+            source /root/venv/bin/activate
             git pull
             python manage.py migrate
             python manage.py collectstatic --noinput
