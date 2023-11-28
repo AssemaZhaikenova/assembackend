@@ -1,8 +1,8 @@
-name: deploy
+name: Deploy
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,18 +23,18 @@ jobs:
       - name: Run Tests
         run: |
           dir
-          cd assembackend
+          cd main_dr
           python manage.py test
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: 24.199.113.17
+          host: 34.116.67.50
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd assembackend
-            source /root/venv/bin/activate
+            cd a
+            source /home/kimd_22848/venv/bin/activate
             git pull
             python manage.py migrate
             python manage.py collectstatic --noinput
