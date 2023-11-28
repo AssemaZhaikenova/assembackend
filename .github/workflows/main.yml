@@ -28,8 +28,6 @@ jobs:
 
       - name: Run Tests
         run: |
-          ls -R
-          cd assembackend
           python manage.py test
 
       - name: Execute remote SSH commands using password
