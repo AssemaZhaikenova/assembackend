@@ -22,7 +22,6 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          dir
           cd assembackend
           python manage.py test
       - name: executing remote ssh commands using password
