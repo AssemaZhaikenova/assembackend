@@ -2,7 +2,7 @@ from django.test import TestCase
 from app3.models import Product, Category, Order
 
 
-class ProductTest(TestCase):
+class ProductTestCase(TestCase):
     def setUp(self):
         Product.objects.create(name="Test Product", price=100)
 
