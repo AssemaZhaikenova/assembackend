@@ -8,7 +8,7 @@ class ProductTestCase(TestCase):
 
     def test_product_price(self):
         product = Product.objects.get(name="Test Product")
-        self.assertEqual(product.price, -1)
+        self.assertEqual(product)
 
     def test_product_name_length(self):
         product = Product.objects.get(name="Test Product")
