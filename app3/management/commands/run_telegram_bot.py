@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 
 import telebot
-from app3.models import P
+from app3.models import Product
 
 
 bot = telebot.TeleBot("6395912918:AAGAvnzXeYtwo6uzPb3deOO8Do_G5iW-RwY")
