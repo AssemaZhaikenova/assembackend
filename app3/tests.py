@@ -2,13 +2,13 @@ from django.test import TestCase
 from app3.models import Product, Category, Order
 
 
-class ProductTestCase(TestCase):
+class ProductTest(TestCase):
     def setUp(self):
         Product.objects.create(name="Test Product", price=100)
 
     def test_product_price(self):
         product = Product.objects.get(name="Test Product")
-        self.assertEqual(product)
+        self.assertEqual(product.price, 100)
 
     def test_product_name_length(self):
         product = Product.objects.get(name="Test Product")
