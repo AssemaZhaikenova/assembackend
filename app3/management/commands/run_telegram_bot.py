@@ -7,7 +7,7 @@ from app3.models import Product
 bot = telebot.TeleBot("6395912918:AAGAvnzXeYtwo6uzPb3deOO8Do_G5iW-RwY")
 
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['run'])
 def start(message):
     bot.send_message(message.chat.id, "Hello world!")
 
